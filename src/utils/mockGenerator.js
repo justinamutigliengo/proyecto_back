@@ -1,5 +1,5 @@
 import bcrypt from "bcryptjs";
-import faker from "faker";
+import { faker } from "@faker-js/faker";
 
 export const generateMockUsers = async (numUsers) => {
   const users = [];
@@ -8,7 +8,6 @@ export const generateMockUsers = async (numUsers) => {
     const password = bcrypt.hashSync("coder123", 10);
     const role = Math.random() > 0.5 ? "user" : "admin";
     const user = {
-      _id: faker.datatype.uuid(),
       firstName: faker.name.firstName(),
       lastName: faker.name.lastName(),
       email: faker.internet.email(),
@@ -19,6 +18,5 @@ export const generateMockUsers = async (numUsers) => {
 
     users.push(user);
   }
-
   return users;
 };
