@@ -56,6 +56,9 @@ const mocksController = {
           username: faker.internet.userName(),
           password: "coder123",
           role: faker.helpers.arrayElement(["user", "admin"]),
+          email: faker.internet.email(),
+          first_name: faker.name.firstName(),
+          last_name: faker.name.lastName(),
           pets: [],
         };
 
@@ -69,6 +72,7 @@ const mocksController = {
           name: faker.animal.dog(),
           age: faker.datatype.number({ min: 1, max: 15 }),
           breed: faker.animal.dog(),
+          specie: faker.helpers.arrayElement(["dog", "cat", "bird", "hamster"]),
         };
 
         const newPet = await petsService.create(pet);
