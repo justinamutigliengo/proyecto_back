@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const collection = "Pets";
+const collection = "adopme_pets";
 
 const schema = new mongoose.Schema({
   name: {

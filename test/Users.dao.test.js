@@ -11,7 +11,7 @@ const testUser = {
   first_name: "Juan",
   last_name: "Perez",
   email: "jperez@gmail.com",
-  password: "abc123",
+  password: "abc445",
 };
 
 describe("Test DAO Users", function () {
